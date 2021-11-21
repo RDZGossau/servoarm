@@ -4,13 +4,23 @@ input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, 90)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, 90)
 })
-let VorZurück = 0
 let Greifer = 0
 let Drehung = 0
+let VorZurück = 0
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo1, 90)
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo2, 90)
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, 90)
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, 90)
+basic.forever(function () {
+    VorZurück = pins.analogReadPin(AnalogPin.P1)
+    Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo2, pins.map(
+    0,
+    0,
+    990,
+    20,
+    160
+    ))
+})
 basic.forever(function () {
     Drehung = pins.analogReadPin(AnalogPin.P0)
     led.plotBarGraph(
