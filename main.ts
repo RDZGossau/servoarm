@@ -57,7 +57,7 @@ basic.forever(function () {
     ))
 })
 basic.forever(function () {
-    Greifer = pins.analogReadPin(AnalogPin.P2)
+    Greifer = pins.analogReadPin(AnalogPin.P3)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo6, pins.map(
     Greifer,
     0,
