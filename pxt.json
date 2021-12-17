@@ -6,7 +6,8 @@
         "radio": "*",
         "microphone": "*",
         "pxt-kitronik-robotics-board": "github:kitronikltd/pxt-kitronik-robotics-board#v0.0.5",
-        "servo": "*"
+        "servo": "*",
+        "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.7"
     },
     "files": [
         "main.blocks",
