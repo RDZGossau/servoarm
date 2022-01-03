@@ -1,9 +1,11 @@
+// "Bedienhilfe", um alle Servos während dem Betrieb in die Mittelposition zu bringen
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo1, 90)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo2, 90)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, 90)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, 90)
 })
+// Dieser Startblock positioniert alle Servos in die Mitte.
 let Greifer = 0
 let VorZurück = 0
 let Drehung = 0
@@ -14,6 +16,7 @@ Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, 90)
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, 90)
 basic.pause(2000)
 basic.forever(function () {
+    // 
     HochRunter = pins.analogReadPin(AnalogPin.P0)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo1, pins.map(
     HochRunter,
