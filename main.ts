@@ -16,7 +16,6 @@ Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo3, 90)
 Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo4, 90)
 basic.pause(2000)
 basic.forever(function () {
-    // 
     HochRunter = pins.analogReadPin(AnalogPin.P0)
     Kitronik_Robotics_Board.servoWrite(Kitronik_Robotics_Board.Servos.Servo1, pins.map(
     HochRunter,

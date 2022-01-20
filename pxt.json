@@ -1,5 +1,5 @@
 {
-    "name": "ServoArm",
+    "name": "GripperSimulator",
     "description": "",
     "dependencies": {
         "core": "*",
